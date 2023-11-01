@@ -188,6 +188,7 @@ hr {
 
 /* Overlay */
 .overlay {
+  position: relative;
   width: 0;
   height: 0;
   overflow: hidden;
@@ -309,6 +310,27 @@ hr {
   position: absolute;
   top: 488px;
   left: 65px;
+}
+
+/* Navigation */
+.lanjut,
+.mundur {
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  z-index: 99999;
+  top: 48%;
+  left: 880px;
+  transition: 0.5s;
+}
+
+.mundur {
+  left: 333px;
+}
+
+.overlay:target .lanjut,
+.overlay:target .mundur {
+  animation: zoomDanFade 1.5s 2.9s both;
 }
 
 /* Animation */
